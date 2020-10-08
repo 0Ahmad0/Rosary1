@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Rosary</title>
+
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+
+<body>
+
+<div class="cont">
+
+	<div class="cont_up" id="col">
+
+	<div id="screen">
+
+	<p id="display">0</p>	
+
+	</div>
+
+	</div>
+
+	<div class="cont_body" id="col1">
+
+	<button id="play" onclick="play()"></button>
+
+	<button id="reset" onclick="reset()"></button>
+
+	</div>
+
+	<div class="cont_down" id="col2"></div>
+
+	<div  class="cont_color">
+
+	<code>Change Color </code>
+
+	<input type="color" value="#960098"  id="cha" onchange="change()">
+
+	</div>
+
+	</div>	
+
+	
+
+
+
+	
+
+<script>
+
+var i = 1;
+
+	
+
+/*-------------------------------------------------*/
+
+function play(){
+
+	var x = document.getElementById("display");
+
+	
+
+	x.innerHTML = i;
+
+	i++;
+
+}
+
+		
+
+/*-------------------------------------------------*/
+
+function reset(){
+
+	var x = document.getElementById("display");
+
+	
+
+	x.innerHTML = 0;
+
+	i = 1;
+
+}
+
+/*-------------------------------------------------*/
+
+function change(){
+
+    var x = document.getElementById("col");
+
+	var xx = document.getElementById("col1");
+
+	var xxx = document.getElementById("col2");
+
+	var y = document.getElementById("cha");
+
+	
+
+	x.style.background = y.value;
+
+	xx.style.background = y.value;
+
+	xxx.style.background = y.value;
+
+}
+
+</script>
+
+</body>
+
+</html>
